@@ -1,0 +1,43 @@
+## 변수
+변수는 ``var`` 또는 ``:=`` 키워드를 사용하여 선언할 수 있습니다.  변수를 선언하면서 초기값을 선언하지 않으면 Go는 **Zero Value**를 기본적으로 할당한다. **숫자형**에는 0,  **bool**에는 false, **문자열**에는 빈물자열을 할당한다 
+
+### var
+``var`` 키워드를 사용하는 방식과 자료형을 생략하는 방식 두가지가 있습니다.
+```
+var i int
+var s string
+
+var i = 10
+var s = "Hello, World"
+
+var x, y = 10, 20
+var i, s = 10, "Hello, World"
+```
+
+### :=
+``:=``를 사용하면 ``var``와 자료형 키워드를 사용하지 않고 간단하게 변수를 선안하고 초기화할 수 있습니다. 여기서 변수의 자료형은 대입하는 값의 자료형으로 결정됩니다
+
+```
+i := 10
+s := "Hello, World"
+
+i, s, b := 10, "Hello, World", true // i = 10, s = "Hello, World" b = true
+```
+#### 참고
+Go언어는 선언하고 사용하지 않는 변수 또는 import가 있으면 컴파일 에러가 발생합니다.  변수를 사용하지 않지만 선언해야하는 경우 `_`를 통해 컴파일 에러를 방지할 수 있습니다.
+
+## 상수
+상수는 ``const`` 키워드를 사용하여 선언할 수 있습니다. ``const``는 코드에서 고정된 값을 관리할때 사용합니다. 상수는 반드시 선언과 동시에 초기값을 선언해야 합니다.
+
+```
+const i int = 10
+const s string = "Hello, World"
+
+const i = 10
+const s = "Hello, World"
+
+const t string // Compile Error
+```
+
+
+
